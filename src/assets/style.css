@@ -1,79 +1,150 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Typography */
+  font-family: "Rubik", Arial, sans-serif;
+  font-weight: 300;
+  color: hsl(30, 50%, 70%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Utopia Type scale */
+  --step--1: clamp(0.9375rem, 0.9155rem + 0.0939vi, 1rem);
+  --step-0: clamp(1.125rem, 1.081rem + 0.1878vi, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2752rem + 0.3192vi, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5027rem + 0.5005vi, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.7689rem + 0.7473vi, 2.4414rem);
+
+
+  /* COLORS */
+  /* Primary */
+
+  --Blue: hsl(246, 80%, 60%);
+  --Lightred: hsl(15, 100%, 70%);
+  --Softblue: hsl(195, 74%, 62%);
+  --Lightred: hsl(348, 100%, 68%);
+  --Limegreen: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Softorange: hsl(43, 84%, 65%);
+
+  /* Neutral */
+
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+
+
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/Rubik-VariableFont_wght.ttf");
 }
-a:hover {
-  color: #535bf2;
+
+/* CSS Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-block-end: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  line-height: 1.5;
 }
 
-h1 {
-  font-size: 3.2em;
+h1,
+h2,
+h3 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-.card {
-  padding: 2em;
+
+/* End Resets */
+
+/* App Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: var(--Verydarkblue);
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+main {
+  max-width: 88%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+header {
+  background-color: var(--Desaturatedblue);
+  display: flex;
+  justify-content: center;
+  border-radius: .5em;
+  padding-block-start: 1.25em;
+  padding-block-end: 1.25em;
+}
+
+
+
+img {
+  max-width: 20%;
+  border: 3px solid hsl(0, 99%, 99%);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 1em;
+
+}
+
+h1 {
+  flex-shrink: 0;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  inset-block-end: 10px;
+
+}
+
+span.intro {
+  font-size: var(--step--1);
+}
+
+span.name {
+  font-size: var(--step-1);
+}
+
+nav {
+  background-color: var(--Darkblue);
+  position: relative;
+  inset-block-start: -1rem;
+  z-index: -1;
+  padding-block-start: 2em;
+  padding-block-end: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  border-end-end-radius: 1em;
+  border-end-start-radius: 1em;
 }
