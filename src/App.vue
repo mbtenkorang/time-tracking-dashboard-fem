@@ -18,15 +18,15 @@ const fetchUserData = async () => {
 
 onMounted(() => fetchUserData())
 
-const getClickedValue = (s) => {
+const selectedValue = (s) => {
   selectedTimeFrame.value = s
 }
 
 </script>
 
 <template>
-  <UserProfileCard @handleClick="getClickedValue" />
-  <InformationCard v-for="{title, timeframes},index in userData" :card-title="title"
+  <UserProfileCard @gettime="selectedValue" />
+  <InformationCard v-for="{title, timeframes},index in userData" :card-title="title" :selected-time="selectedTimeFrame"
     :current-time-value="timeframes[selectedTimeFrame].current"
     :previous-time-value="timeframes[selectedTimeFrame].previous" :key="index" />
 
