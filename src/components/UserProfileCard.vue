@@ -1,27 +1,27 @@
 <script setup>
+import avatarImage from "../assets/images/image-jeremy.png"
+const emit = defineEmits(['gettime'])
 
-const emit = defineEmits(['handleClick'])
-
-const handleClick = (event) => {
-    emit('handleClick', event.target.innerHTML.toLowerCase())
+const handleSelectedTime = (event) => {
+    emit('gettime', event.target.innerHTML.toLowerCase())
 }
 </script>
 
 <template>
-    <div>
-        <header class="card">
-            <div>
-                <img src="" alt="">
+    <div class="header--container">
+        <header>
+            <div class="profile">
+                <img :src="avatarImage" alt="Picture of Jeremy Robson">
                 <h1>
-                    <span>Report for </span>
-                    <span>Jeremy Robson</span>
+                    <span class="intro">Report for </span>
+                    <span class="name">Jeremy Robson</span>
                 </h1>
             </div>
         </header>
         <nav>
-            <a @click.prevent="handleClick" href="daily">Daily</a>
-            <a @click.prevent="handleClick" href="weekly">Weekly</a>
-            <a @click.prevent="handleClick" href="monthly">Monthly</a>
+            <a @click.prevent="handleSelectedTime" href="daily">Daily</a>
+            <a @click.prevent="handleSelectedTime" href="weekly">Weekly</a>
+            <a @click.prevent="handleSelectedTime" href="monthly">Monthly</a>
         </nav>
     </div>
 
