@@ -1,9 +1,9 @@
 <script setup>
 import avatarImage from "../assets/images/image-jeremy.png"
-const emit = defineEmits(['gettime'])
+const emit = defineEmits(['getrecordforperiod'])
 
 const handleSelectedTime = (event) => {
-    emit('gettime', event.target.innerHTML.toLowerCase())
+    emit('getrecordforperiod', event.target.innerHTML.toLowerCase())
 }
 </script>
 
