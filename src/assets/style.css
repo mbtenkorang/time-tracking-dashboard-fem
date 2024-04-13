@@ -34,8 +34,6 @@
   --Darkblue: hsl(235, 46%, 20%);
   --Desaturatedblue: hsl(235, 45%, 61%);
   --PaleBlue: hsl(236, 100%, 87%);
-
-
 }
 
 
@@ -64,6 +62,9 @@ h3,
 h4,
 p {
   margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 body {
@@ -89,7 +90,6 @@ footer {
 
 /* End Resets */
 
-/* App Styles */
 
 /* Mobile Design */
 body {
@@ -113,7 +113,7 @@ header {
   border-radius: .5em;
   padding-block-start: 1.5em;
   padding-block-end: 1.5em;
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 
@@ -121,7 +121,6 @@ div.profile {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 img {
@@ -205,14 +204,14 @@ p.previous--value {
 }
 
 section {
-  height: 11rem;
+  height: 9rem;
   border-radius: 1rem;
-  overflow: hidden;
-  margin-block-end: 2em;
+  /* overflow: hidden; */
+  margin-block-end: 3.5em;
 }
 
 section:last-child {
-  margin-block-end: 0;
+  margin-block-end: 2em;
 }
 
 div.information--card {
@@ -252,3 +251,57 @@ div.information--card {
 }
 
 /* Desktop Design */
+
+@media screen and (min-width: 1020px) {
+  body {
+    justify-content: center;
+  }
+
+  main {
+    display: grid;
+    column-gap: 1.5em;
+    row-gap: 2em;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  div.header--container {
+    margin-block-end: 0;
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    border: 2px dotted greenyellow;
+  }
+
+  div.profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  img {
+    max-width: 30%;
+  }
+
+  span.name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: space-between;
+    position: static;
+  }
+
+  section.information--container {
+    height: 10rem;
+    margin-block-end: 2rem;
+  }
+
+
+
+  div.card--details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
