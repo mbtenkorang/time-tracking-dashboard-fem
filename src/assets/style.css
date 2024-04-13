@@ -224,6 +224,8 @@ div.information--card {
   padding-block-start: 1.5em;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .work {
@@ -271,6 +273,10 @@ div.information--card {
     grid-row: 1/3;
 
     border: 2px dotted greenyellow;
+  }
+
+  h1 {
+    max-width: 80%;
   }
 
   div.profile {
