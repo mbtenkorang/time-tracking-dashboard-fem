@@ -46,6 +46,5 @@ const props = defineProps({
                 </p>
             </div>
         </div>
-
     </section>
 </template>
