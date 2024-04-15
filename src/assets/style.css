@@ -97,6 +97,8 @@ body {
   flex-direction: column;
   place-items: center;
   background-color: var(--Verydarkblue);
+  padding-block-start: 5em;
+  padding-block-end: 5em;
 }
 
 main {
@@ -263,14 +265,16 @@ div.information--title span {
 @media screen and (min-width: 1020px) {
   body {
     justify-content: center;
+    padding: 0;
   }
 
   main {
     display: grid;
     column-gap: 1.5em;
-    row-gap: 2em;
+    row-gap: 1em;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
+    max-width: 70%;
   }
 
   div.header--container {
@@ -281,9 +285,9 @@ div.information--title span {
   }
 
   header.profile {
-    padding-block-end: 4em;
     flex-direction: column;
     align-items: flex-start;
+    height: 65%;
   }
 
   h1 {
@@ -293,11 +297,11 @@ div.information--title span {
   img {
     max-width: 30%;
     margin-inline-end: 0;
-    margin-block-end: 1em;
+    margin-block-end: .5em;
   }
 
   span.intro {
-    margin-block-end: .5em;
+    margin-block-end: .2em;
   }
 
   span.name {
@@ -307,9 +311,7 @@ div.information--title span {
 
   nav {
     flex-direction: column;
-    justify-content: space-evenly;
-    /* position: static; */
-    /* padding-block-start: 1.5em; */
+    height: 33%;
   }
 
   a {
@@ -328,7 +330,6 @@ div.information--title span {
 
   section.information--container {
     height: 10rem;
-    margin-block-end: 2rem;
   }
 
   div.card--details {
