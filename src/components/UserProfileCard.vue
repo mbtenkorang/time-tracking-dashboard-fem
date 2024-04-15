@@ -9,14 +9,12 @@ const handleSelectedTime = (event) => {
 
 <template>
     <div class="header--container">
-        <header>
-            <div class="profile">
-                <img :src="avatarImage" alt="Picture of Jeremy Robson">
-                <h1>
-                    <span role="heading" class="intro">Report for </span>
-                    <span role="heading" class="name">Jeremy Robson</span>
-                </h1>
-            </div>
+        <header class="profile">
+            <img :src="avatarImage" alt="Picture of Jeremy Robson">
+            <h1>
+                <span role="heading" class="intro">Report for </span>
+                <span role="heading" class="name">Jeremy Robson</span>
+            </h1>
         </header>
         <nav>
             <a @click.prevent="handleSelectedTime" href="daily">Daily</a>
