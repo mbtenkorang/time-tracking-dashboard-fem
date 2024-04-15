@@ -13,8 +13,8 @@ const handleSelectedTime = (event) => {
             <div class="profile">
                 <img :src="avatarImage" alt="Picture of Jeremy Robson">
                 <h1>
-                    <span class="intro">Report for </span>
-                    <span class="name">Jeremy Robson</span>
+                    <span role="heading" class="intro">Report for </span>
+                    <span role="heading" class="name">Jeremy Robson</span>
                 </h1>
             </div>
         </header>
