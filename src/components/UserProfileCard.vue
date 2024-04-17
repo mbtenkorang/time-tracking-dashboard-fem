@@ -12,8 +12,8 @@ const handleSelectedTime = (event) => {
         <header class="profile">
             <img :src="avatarImage" alt="Picture of Jeremy Robson">
             <h1>
-                <span role="heading" class="intro">Report for </span>
-                <span role="heading" class="name">Jeremy Robson</span>
+                <span role="heading" aria-label="heading" aria-labelledby="heading" class="intro">Report for </span>
+                <span role="heading" aria-label="heading" aria-labelledby="heading" class="name">Jeremy Robson</span>
             </h1>
         </header>
         <nav>
